@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Windows"
         mc:Ignorable="d"
-        Title="MainMenu" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MainMenu" Height="450" Width="500" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="491*"/>
+            <ColumnDefinition Width="55*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="197*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="LabelMM" Grid.Column="1" Content="Главное Меню" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="290" Height="62"
+               Style="{DynamicResource LabelLogoStyle}" Margin="119,0,0,0"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="72" Margin="26,-61,0,0"
+               Style="{DynamicResource ImageLogoStyle}"/>
+        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"/>
+        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center"/>
+        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
+
+
     </Grid>
 </Window>
