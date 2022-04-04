@@ -13,12 +13,12 @@
             <ColumnDefinition Width="55*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="62*"/>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="56*"/>
-            <RowDefinition Height="56*"/>
-            <RowDefinition Height="56*"/>
-            <RowDefinition Height="130*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="65*"/>
             <RowDefinition Height="67*"/>
         </Grid.RowDefinitions>
         <Label x:Name="LabelMM" Grid.Column="1" Content="Главное Меню" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="208" Height="62"
