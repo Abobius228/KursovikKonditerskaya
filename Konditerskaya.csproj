@@ -52,13 +52,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=2.0.5.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignColors.2.0.5\lib\net452\MaterialDesignColors.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignThemes.Wpf, Version=4.4.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignThemes.4.4.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +88,36 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Resources\DataFolder\Clients.cs">
+      <DependentUpon>KonditerskayaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DataFolder\KonditerskayaDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KonditerskayaDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DataFolder\KonditerskayaDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KonditerskayaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DataFolder\KonditerskayaDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KonditerskayaDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DataFolder\Roles.cs">
+      <DependentUpon>KonditerskayaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DataFolder\sysdiagrams.cs">
+      <DependentUpon>KonditerskayaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DataFolder\User.cs">
+      <DependentUpon>KonditerskayaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DataFolder\Zakaz.cs">
+      <DependentUpon>KonditerskayaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
@@ -126,12 +166,18 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <EntityDeploy Include="Resources\DataFolder\KonditerskayaDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KonditerskayaDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Resources\DataFolder\KonditerskayaDB.edmx.diagram">
+      <DependentUpon>KonditerskayaDB.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\DataFolder\" />
     <Folder Include="Resources\Logo\" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +191,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\DataFolder\KonditerskayaDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>KonditerskayaDB.Context.cs</LastGenOutput>
+      <DependentUpon>KonditerskayaDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Resources\DataFolder\KonditerskayaDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KonditerskayaDB.edmx</DependentUpon>
+      <LastGenOutput>KonditerskayaDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />
