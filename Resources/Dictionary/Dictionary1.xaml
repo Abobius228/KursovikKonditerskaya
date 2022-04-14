@@ -67,12 +67,6 @@
         <Setter Property="Padding" Value="10"/>
         <Setter Property="Foreground"  Value="#E65100"/>
     </Style>
-    <Style x:Key="ImageLogoStyle" TargetType="Image">
-        <Setter Property="Source" Value="C:\Users\Даня\Downloads\Library\Resources\Logo\cake_PNG96856.png"/>
-        <Setter Property="Grid.Column" Value="1"/>
-        <Setter Property="Grid.Row" Value="1"/>
-        <Setter Property="Margin" Value="10"/>
-    </Style>
     <Style TargetType="ComboBox">
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />

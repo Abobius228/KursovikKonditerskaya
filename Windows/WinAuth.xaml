@@ -33,14 +33,16 @@
         <Image x:Name="Logo" HorizontalAlignment="Center" Height="76" VerticalAlignment="Top" Width="88"
                Style="{DynamicResource ImageLogoStyle}" Margin="0,8,0,0" Grid.RowSpan="3" Grid.Column="1" Grid.Row="1"/>
         <Button x:Name="ExitBtn" Grid.Column="1" Content="Выйти" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Height="52" Width="83"
-                Style="{DynamicResource ButtonlStyle}"
+                Style="{DynamicResource MaterialDesignFlatDarkBgButton}"
                 Click="ExitBtn_Click">
         </Button>
         <Button x:Name="EnterBtn" Grid.Column="2" Content="Войти" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Height="52" Width="188"
-                Style="{DynamicResource ButtonlStyle}"
+                Style="{DynamicResource MaterialDesignFlatDarkBgButton}"
                 Click="EnterBtn_Click">
         </Button>
-        <TextBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="259" Height="41"/>
-        <PasswordBox Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="259" Height="41"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="259" Height="41"
+                 Style="{DynamicResource MaterialDesignTextBox}"/>
+        <PasswordBox Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="259" Height="41"
+                     Style="{DynamicResource MaterialDesignPasswordBox}"/>
     </Grid>
 </Window>

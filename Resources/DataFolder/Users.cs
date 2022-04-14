@@ -12,12 +12,15 @@ namespace Library.Resources.DataFolder
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class Users
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int IdUser { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public int IdRole { get; set; }
+        public Nullable<int> IdClient { get; set; }
+    
+        public virtual Clients Clients { get; set; }
+        public virtual Roles Roles { get; set; }
     }
 }

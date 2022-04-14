@@ -12,12 +12,18 @@ namespace Library.Resources.DataFolder
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class Cakes
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public Cakes()
+        {
+            this.Clients = new HashSet<Clients>();
+        }
+    
+        public int IdCake { get; set; }
+        public string NameCake { get; set; }
+        public int Quantity { get; set; }
+        public decimal Cost { get; set; }
+    
+        public virtual ICollection<Clients> Clients { get; set; }
     }
 }

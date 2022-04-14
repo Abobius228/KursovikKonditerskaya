@@ -23,16 +23,14 @@
         </Grid.RowDefinitions>
         <Label x:Name="LabelMM" Grid.Column="1" Content="Главное Меню" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="208" Height="62"
                Style="{DynamicResource LabelLogoStyle}"/>
-        <Image HorizontalAlignment="Right" Height="58" VerticalAlignment="Top" Width="72" Margin="0,-58,388,0"
-               Style="{DynamicResource ImageLogoStyle}" Grid.ColumnSpan="2"/>
-        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"
-                Style="{DynamicResource ButtonlStyle}" Width="171" Height="56"/>
-        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center"
-                Style="{DynamicResource ButtonlStyle}" Width="171" Height="56"/>
-        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"
-                Style="{DynamicResource ButtonlStyle}" Width="171" Height="56"/>
+        <Button Grid.Column="1" Content="Каталог" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"
+                Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Width="171" Height="56" Click="Button_Click"/>
+        <Button Grid.Column="1" Content="Список заказов" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center"
+                Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Width="171" Height="56"/>
+        <Button Grid.Column="1" Content="Склад" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"
+                Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Width="171" Height="56"/>
         <Button x:Name="BackBtnMM" Grid.Column="1" Content="Назад" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center"
-                Style="{DynamicResource ButtonlStyle}" Height="36" Width="60"/>
+                Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Height="47" Width="82" Margin="167,10,160,10"/>
 
 
     </Grid>
