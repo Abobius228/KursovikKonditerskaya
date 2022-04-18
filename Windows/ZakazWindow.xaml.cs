@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Library.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для ManagerMenu.xaml
+    /// Логика взаимодействия для ZakazWindow.xaml
     /// </summary>
-    public partial class ManagerMenu : Window
+    public partial class ZakazWindow : Window
     {
-        public ManagerMenu()
+        public ZakazWindow()
         {
             InitializeComponent();
-        }
-
-        private void BtnEdit_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

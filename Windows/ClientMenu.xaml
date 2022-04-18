@@ -21,7 +21,7 @@
         <Label Content="Каталог" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" RenderTransformOrigin="-0.166,0.778" Height="52" Width="226"
                Style="{DynamicResource LabelLogoStyle}"/>
 
-        <Button x:Name="ClientCart" Content="Корзина" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180"
+        <Button x:Name="ClientZakazEchpochmak" Content="Сделать заказ" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180"
                 Style="{DynamicResource MaterialDesignFlatDarkBgButton}"/>
 
         <Button x:Name="ClientExit" Content="Выйти" Grid.Column="1" HorizontalAlignment="Left" Margin="10,301,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180"

@@ -139,6 +139,9 @@
     </Compile>
     <Compile Include="Classes\ClassDG.cs" />
     <Compile Include="Classes\ClassMB.cs" />
+    <Compile Include="Windows\ZakazWindow.xaml.cs">
+      <DependentUpon>ZakazWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="Resources\Dictionary\Dictionary1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\WinAuth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ZakazWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -224,7 +231,7 @@
       <DependentUpon>ModelDB.edmx</DependentUpon>
       <LastGenOutput>ModelDB.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\Logo\Logo.png" />
+    <Resource Include="Resources\Logo\Logo.png" />
     <SplashScreen Include="Resources\SplashScreen\Splash.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
