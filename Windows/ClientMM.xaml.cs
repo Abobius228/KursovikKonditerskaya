@@ -15,13 +15,14 @@ using System.Windows.Shapes;
 namespace Library.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для MainMenu.xaml
+    /// Логика взаимодействия для ClientMM.xaml
     /// </summary>
-    public partial class MainMenu : Window
+    public partial class ClientMM : Window
     {
-        public MainMenu()
+        public ClientMM()
         {
             InitializeComponent();
         }
+
     }
 }

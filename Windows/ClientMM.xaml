@@ -1,0 +1,26 @@
+﻿<Window x:Class="Library.Windows.ClientMM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library.Windows"
+        mc:Ignorable="d"
+        Title="Меню пользователя" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="299*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="214"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="53"/>
+        </Grid.RowDefinitions>
+        <Label Content="Каталог" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" RenderTransformOrigin="-0.166,0.778" Height="52" Width="226"
+               Style="{DynamicResource LabelLogoStyle}"/>
+        <Button x:Name="CartClient" Content="Корзина" Grid.Column="1" HorizontalAlignment="Left" Margin="10,6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="182"/>
+    </Grid>
+</Window>

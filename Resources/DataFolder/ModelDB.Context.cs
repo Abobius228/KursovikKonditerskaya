@@ -15,20 +15,11 @@ namespace Library.Resources.DataFolder
     
     public partial class DBEntities1 : DbContext
     {
-        private static DBEntities1 context;
         public DBEntities1()
             : base("name=DBEntities1")
         {
         }
     
-        public static DBEntities1 GetContext()
-        {
-            if (context == null)
-            {
-                context = new DBEntities1();
-            }
-            return context;
-        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
