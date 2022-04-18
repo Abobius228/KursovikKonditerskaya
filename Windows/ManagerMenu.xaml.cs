@@ -11,24 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Data;
-using System.Configuration;
 
 namespace Library.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для CatalogWindow.xaml
+    /// Логика взаимодействия для ManagerMenu.xaml
     /// </summary>
-    public partial class CatalogWindow : Window
+    public partial class ManagerMenu : Window
     {
-        public CatalogWindow()
+        public ManagerMenu()
         {
             InitializeComponent();
-        }
-
-        private void Window_loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

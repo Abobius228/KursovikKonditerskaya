@@ -1,0 +1,43 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library.Windows"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Library.Windows.ClientMM"
+        mc:Ignorable="d"
+        Title="Меню пользователя" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="299*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53"/>
+            <RowDefinition Height="343"/>
+            <RowDefinition Height="53"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Каталог" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" RenderTransformOrigin="-0.166,0.778" Height="52" Width="226"
+               Style="{DynamicResource LabelLogoStyle}"/>
+
+        <Button x:Name="ClientCart" Content="Корзина" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180"
+                Style="{DynamicResource MaterialDesignFlatDarkBgButton}"/>
+
+        <Button x:Name="ClientExit" Content="Выйти" Grid.Column="1" HorizontalAlignment="Left" Margin="10,301,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180"
+            Style="{DynamicResource MaterialDesignFlatDarkBgButton}"/>
+
+
+        <DataGrid x:Name="ClientCatalogDataGrid" HorizontalAlignment="Left" Height="323" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="574"
+                  Style="{DynamicResource ResourceKey=MaterialDesignDataGrid}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding CakeName}" Width="*"/>
+                <DataGridTextColumn Header="Кол-во" Binding="{Binding Quantity}" Width="*"/>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding Cost}" Width="*"/>
+                <DataGridTemplateColumn Width="auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

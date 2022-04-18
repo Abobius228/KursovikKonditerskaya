@@ -52,11 +52,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignColors, Version=2.0.5.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignColors.2.0.5\lib\net452\MaterialDesignColors.dll</HintPath>
@@ -69,6 +66,7 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -123,11 +121,14 @@
     <Compile Include="Resources\DataFolder\Users.cs">
       <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Windows\CatalogWindow.xaml.cs">
-      <DependentUpon>CatalogWindow.xaml</DependentUpon>
+    <Compile Include="Windows\AdminMenu.xaml.cs">
+      <DependentUpon>AdminMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ClientMM.xaml.cs">
-      <DependentUpon>ClientMM.xaml</DependentUpon>
+    <Compile Include="Windows\ClientMenu.xaml.cs">
+      <DependentUpon>ClientMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ManagerMenu.xaml.cs">
+      <DependentUpon>ManagerMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\WinAuth.xaml.cs">
       <DependentUpon>WinAuth.xaml</DependentUpon>
@@ -142,11 +143,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\CatalogWindow.xaml">
+    <Page Include="Windows\AdminMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ClientMM.xaml">
+    <Page Include="Windows\ClientMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ManagerMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,6 +177,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -189,7 +195,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\Icon\" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
@@ -216,7 +224,7 @@
       <DependentUpon>ModelDB.edmx</DependentUpon>
       <LastGenOutput>ModelDB.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\Logo.png" />
+    <None Include="Resources\Logo\Logo.png" />
     <SplashScreen Include="Resources\SplashScreen\Splash.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
