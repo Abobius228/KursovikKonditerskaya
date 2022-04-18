@@ -36,7 +36,7 @@
         <Label Content="Оплата" HorizontalAlignment="Left" Margin="0,24,0,0" Grid.Row="3" VerticalAlignment="Top" Height="47" Width="210"
             Style="{DynamicResource LabelStyle}"/>
 
-        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="128" Height="62"
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="153" Height="62"
                 Style="{DynamicResource MaterialDesignFlatLightBgButton}"/>
 
         <Button Content="Оформить заказ" HorizontalAlignment="Left" Margin="215,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="275" Height="62"
