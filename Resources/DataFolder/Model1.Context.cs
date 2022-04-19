@@ -13,23 +13,24 @@ namespace Library.Resources.DataFolder
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBEntities1 : DbContext
+    public partial class DBEntities : DbContext
     {
-        private static DBEntities1 _context;
+        private static DBEntities _context;
 
-        public DBEntities1()
-            : base("name=DBEntities1")
+        public DBEntities()
+            : base("name=DBEntities")
         {
         }
 
-        public static DBEntities1 GetContext()
+        public static DBEntities GetContext()
         {
             if (_context == null)
-                _context = new DBEntities1();
+                _context = new DBEntities();
 
             return _context;
-        }
 
+        }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -38,7 +39,6 @@ namespace Library.Resources.DataFolder
         public DbSet<Cakes> Cakes { get; set; }
         public DbSet<Clients> Clients { get; set; }
         public DbSet<Roles> Roles { get; set; }
-        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<Users> Users { get; set; }
         public DbSet<Ingredients> Ingredients { get; set; }
     }

@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Windows"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Library.Windows.ClientMM"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Library.Windows.ClientMenu"
         mc:Ignorable="d"
         Title="Меню пользователя" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
@@ -22,18 +22,18 @@
                Style="{DynamicResource LabelLogoStyle}"/>
 
         <Button x:Name="ClientZakazEchpochmak" Content="Сделать заказ" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180"
-                Style="{DynamicResource MaterialDesignFlatDarkBgButton}"/>
+                Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Click="ClientZakazEchpochmak_Click"/>
 
         <Button x:Name="ClientExit" Content="Выйти" Grid.Column="1" HorizontalAlignment="Left" Margin="10,301,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180"
-            Style="{DynamicResource MaterialDesignFlatDarkBgButton}"/>
+            Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Click="ClientExit_Click"/>
 
 
         <DataGrid x:Name="ClientCatalogDataGrid" HorizontalAlignment="Left" Height="323" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="574"
                   Style="{DynamicResource ResourceKey=MaterialDesignDataGrid}"
                   AutoGenerateColumns="False"
-                  IsReadOnly="True">
+                  IsReadOnly="True" SelectionChanged="ClientCatalogDataGrid_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Название" Binding="{Binding CakeName}" Width="*"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding NameCake}" Width="*"/>
                 <DataGridTextColumn Header="Кол-во" Binding="{Binding Quantity}" Width="*"/>
                 <DataGridTextColumn Header="Стоимость" Binding="{Binding Cost}" Width="*"/>
                 <DataGridTemplateColumn Width="auto"/>

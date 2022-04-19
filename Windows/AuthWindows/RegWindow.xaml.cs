@@ -15,14 +15,13 @@ using System.Windows.Shapes;
 namespace Library.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для ClientMM.xaml
+    /// Логика взаимодействия для RegWindow.xaml
     /// </summary>
-    public partial class ClientMM : Window
+    public partial class RegWindow : Window
     {
-        public ClientMM()
+        public RegWindow()
         {
             InitializeComponent();
         }
-
     }
 }

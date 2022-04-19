@@ -89,48 +89,48 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Resources\DataFolder\Cakes.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Resources\DataFolder\Clients.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Resources\DataFolder\Ingredients.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Resources\DataFolder\ModelDB.Context.cs">
+    <Compile Include="Resources\DataFolder\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDB.Context.tt</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Resources\DataFolder\ModelDB.cs">
+    <Compile Include="Resources\DataFolder\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDB.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Resources\DataFolder\ModelDB.Designer.cs">
+    <Compile Include="Resources\DataFolder\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelDB.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Resources\DataFolder\Roles.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\DataFolder\sysdiagrams.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Resources\DataFolder\Users.cs">
-      <DependentUpon>ModelDB.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Windows\AdminMenu.xaml.cs">
+    <Compile Include="Windows\AdminWindows\AdminMenu.xaml.cs">
       <DependentUpon>AdminMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ClientMenu.xaml.cs">
+    <Compile Include="Windows\ClientWindows\ClientMenu.xaml.cs">
       <DependentUpon>ClientMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ManagerMenu.xaml.cs">
+    <Compile Include="Windows\ManagerWindows\ManagerMenu.xaml.cs">
       <DependentUpon>ManagerMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\WinAuth.xaml.cs">
+    <Compile Include="Windows\AuthWindows\RegWindow.xaml.cs">
+      <DependentUpon>RegWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AuthWindows\WinAuth.xaml.cs">
       <DependentUpon>WinAuth.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
@@ -139,30 +139,34 @@
     </Compile>
     <Compile Include="Classes\ClassDG.cs" />
     <Compile Include="Classes\ClassMB.cs" />
-    <Compile Include="Windows\ZakazWindow.xaml.cs">
+    <Compile Include="Windows\ClientWindows\ZakazWindow.xaml.cs">
       <DependentUpon>ZakazWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Resources\Dictionary\Dictionary1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\AdminMenu.xaml">
+    <Page Include="Windows\AdminWindows\AdminMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ClientMenu.xaml">
+    <Page Include="Windows\ClientWindows\ClientMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ManagerMenu.xaml">
+    <Page Include="Windows\ManagerWindows\ManagerMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\WinAuth.xaml">
+    <Page Include="Windows\AuthWindows\RegWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ZakazWindow.xaml">
+    <Page Include="Windows\AuthWindows\WinAuth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ClientWindows\ZakazWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,12 +195,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="Resources\DataFolder\ModelDB.edmx">
+    <EntityDeploy Include="Resources\DataFolder\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Resources\DataFolder\ModelDB.edmx.diagram">
-      <DependentUpon>ModelDB.edmx</DependentUpon>
+    <None Include="Resources\DataFolder\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -221,18 +225,20 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\DataFolder\ModelDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDB.edmx</DependentUpon>
-      <LastGenOutput>ModelDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Resources\DataFolder\ModelDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelDB.edmx</DependentUpon>
-      <LastGenOutput>ModelDB.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resources\Logo\Logo.png" />
     <SplashScreen Include="Resources\SplashScreen\Splash.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\DataFolder\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\DataFolder\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />

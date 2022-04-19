@@ -41,7 +41,7 @@ namespace Library.Windows
                         }
                         else
                         {
-                            var user = DBEntities1.GetContext().Users
+                            var user = DBEntities.GetContext().Users
                                                  .FirstOrDefault(u => u.UserName == TbLogin.Text);
                             if (user == null)
                             {
@@ -58,16 +58,25 @@ namespace Library.Windows
                                 switch (user.IdRole)
                                 {
                                     case 1:
-                                        MessageBox.Show("Администратор");
+                                        MessageBox.Show("Вы вошли как Пользователь");
+                                        Windows.ClientMenu clientMenu = new Windows.ClientMenu();
+                                        this.Close();
+                                        clientMenu.ShowDialog();
                                         break;
                                     case 2:
-                                        MessageBox.Show("Пользователь");
+                                        MessageBox.Show("Вы вошли как Администратор");
+                                        Windows.AdminMenu adminMenu = new Windows.AdminMenu();
+                                        this.Close();
+                                        adminMenu.ShowDialog();
                                         break;
                                     case 3:
-                                        MessageBox.Show("Менеджер");
+                                        MessageBox.Show("Вы вошли как Менеджер");
+                                        Windows.ManagerMenu managerMenu = new Windows.ManagerMenu();
+                                        this.Close();
+                                        managerMenu.ShowDialog();
                                         break;
                                     case 4:
-                                        MessageBox.Show("Кладовщик");
+                                        MessageBox.Show("Вы вошли как Кладовщик");
                                         break;
                                 }
                             }
