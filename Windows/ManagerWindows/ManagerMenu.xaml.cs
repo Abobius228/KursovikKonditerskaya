@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Library.Resources.DataFolder;
 
 namespace Library.Windows
 {
@@ -22,6 +23,7 @@ namespace Library.Windows
         public ManagerMenu()
         {
             InitializeComponent();
+            ManagerDataGrid.ItemsSource = DBEntities.GetContext().Clients.ToList();//ПОЛУЧЕНИЕ СПИСКА КЛИЕНТОВ ИЗ БАЗЫ ДАННЫХ
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)

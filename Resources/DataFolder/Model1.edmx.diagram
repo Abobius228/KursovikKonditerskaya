@@ -13,6 +13,7 @@
         <AssociationConnector Association="DBModel.FK_Clients_Cakes" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Users_Clients" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Users_Roles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

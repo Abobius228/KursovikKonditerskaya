@@ -24,7 +24,7 @@
             Style="{DynamicResource MaterialDesignFlatDarkBgButton}"/>
 
 
-            <DataGrid x:Name="ClientCatalogDataGrid" HorizontalAlignment="Left" Height="323" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="574"
+            <DataGrid x:Name="ManagerDataGrid" HorizontalAlignment="Left" Height="323" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="574"
                   Style="{DynamicResource ResourceKey=MaterialDesignDataGrid}"
                   AutoGenerateColumns="False"
                   IsReadOnly="True">

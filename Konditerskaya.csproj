@@ -115,6 +115,9 @@
     <Compile Include="Resources\DataFolder\Roles.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Resources\DataFolder\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Resources\DataFolder\Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

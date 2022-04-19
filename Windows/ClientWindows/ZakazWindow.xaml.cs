@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Library.Resources.DataFolder;
 
 namespace Library.Windows
 {
@@ -22,6 +23,11 @@ namespace Library.Windows
         public ZakazWindow()
         {
             InitializeComponent();
+        }
+
+        private void ZakazWindowExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
