@@ -30,5 +30,12 @@ namespace Library.Windows
         {
 
         }
+
+        private void ManagerExit_Click(object sender, RoutedEventArgs e)
+        {
+            WinAuth winAuth = new WinAuth();
+            this.Close();
+            winAuth.ShowDialog();
+        }
     }
 }

@@ -21,7 +21,7 @@
                Style="{DynamicResource LabelLogoStyle}"/>
 
         <Button x:Name="ManagerExit" Content="Выйти" Grid.Column="1" HorizontalAlignment="Left" Margin="10,301,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180"
-            Style="{DynamicResource MaterialDesignFlatDarkBgButton}"/>
+            Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Click="ManagerExit_Click"/>
 
 
             <DataGrid x:Name="ManagerDataGrid" HorizontalAlignment="Left" Height="323" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="574"

@@ -25,9 +25,18 @@ namespace Library.Windows
             InitializeComponent();
         }
 
-        private void ZakazWindowExit_Click(object sender, RoutedEventArgs e)
+        private void ZakazWindowExit_Click(object sender, RoutedEventArgs e)//КНОПКА ЗАКРЫТИЯ ОКНАОФОРМЛЕНИЯ ЗАКАЗА
         {
             this.Close();
+        }
+
+        private void ZakazWindowOformlenie_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                DBEntities.GetContext().Clients.Add(new Clients());
+                    DBEntities.GetContext().SaveChanges();
+                Classes.ClassMB.InformationMB("Заказ оформлен!");
+            }
         }
     }
 }

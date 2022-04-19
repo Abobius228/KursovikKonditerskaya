@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Windows;
 using Library.Resources.DataFolder;
-
+using System;
 
 namespace Library.Windows
 {
@@ -75,15 +75,19 @@ namespace Library.Windows
                                         this.Close();
                                         managerMenu.ShowDialog();
                                         break;
-                                    case 4:
-                                        MessageBox.Show("Вы вошли как Кладовщик");
-                                        break;
                                 }
                             }
                         }
                     }
                 }
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            RegWindow regWindow = new RegWindow();
+            this.Close();
+            regWindow.ShowDialog();
         }
     }
 }

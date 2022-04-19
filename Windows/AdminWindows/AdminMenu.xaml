@@ -22,5 +22,26 @@
         <Label Content="Меню Администратора" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" RenderTransformOrigin="-0.166,0.778" Height="52" Width="329"
                Style="{DynamicResource LabelLogoStyle}"/>
 
+        <Button x:Name="AdminExit" Content="Выйти" Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="4" VerticalAlignment="Top" Width="180"
+            Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Click="AdminExit_Click" Margin="10,1,0,0" Height="42"/>
+
+        <DataGrid x:Name="AdminUserDataGrid" HorizontalAlignment="Left" Height="329" Margin="10,4,0,0" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Top" Width="574"
+                  Style="{DynamicResource MaterialDesignDataGrid}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID Пользователя" Binding="{Binding IdUser}" Width="*"/>
+                <DataGridTextColumn Header="Логин пользователя" Binding="{Binding UserName}" Width="*"/>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Name="BtnAdminEdit" Click="BtnAdminEdit_Click"
+                                    Style="{DynamicResource MaterialDesignFlatDarkBgButton}"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Window>

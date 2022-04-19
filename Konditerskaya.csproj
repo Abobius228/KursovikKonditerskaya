@@ -121,6 +121,12 @@
     <Compile Include="Resources\DataFolder\Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AdminWindows\AdminAddUserWindow.xaml.cs">
+      <DependentUpon>AdminAddUserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AdminWindows\AdminEditWindow.xaml.cs">
+      <DependentUpon>AdminEditWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AdminWindows\AdminMenu.xaml.cs">
       <DependentUpon>AdminMenu.xaml</DependentUpon>
     </Compile>
@@ -146,6 +152,14 @@
       <DependentUpon>ZakazWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Resources\Dictionary\Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AdminWindows\AdminAddUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AdminWindows\AdminEditWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

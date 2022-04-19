@@ -50,6 +50,6 @@
                      Style="{DynamicResource MaterialDesignPasswordBox}" Margin="1,12,17,13" Background="#FFCBCBCB"/>
         
         <Button Content="Регистрация" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="8" VerticalAlignment="Top" Width="453" Height="56"
-                Style="{DynamicResource MaterialDesignFlatLightBgButton}" Grid.ColumnSpan="2"/>
+                Style="{DynamicResource MaterialDesignFlatLightBgButton}" Grid.ColumnSpan="2" Click="Button_Click"/>
     </Grid>
 </Window>

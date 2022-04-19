@@ -5,42 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Windows"
         mc:Ignorable="d"
-        Title="ZakazWindow" Height="450" Width="500" ResizeMode="NoResize" WindowStartupLocation="Manual" WindowStyle="None">
+        Title="ZakazWindow" Height="683.102" Width="900" ResizeMode="NoResize" WindowStartupLocation="Manual" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="72*"/>
-            <RowDefinition Height="61*"/>
-            <RowDefinition Height="85*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="77*"/>
             <RowDefinition Height="81*"/>
             <RowDefinition Height="69*"/>
             <RowDefinition Height="82*"/>
         </Grid.RowDefinitions>
-        <Label Content="Добавление заказа" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="52" Width="480"
-               Style="{DynamicResource LabelLogoStyle}"/>
+        <Label Content="Добавление заказа" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="89" Width="880"
+               Style="{DynamicResource LabelLogoStyle}" RenderTransformOrigin="0.488,1.006"/>
 
-        <Label Content="Название торта" HorizontalAlignment="Left" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="47" Width="210"
+        <Label Content="Название&#xD;&#xA; торта" HorizontalAlignment="Left" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="71" Width="119"
                Style="{DynamicResource LabelStyle}"/>
 
-        <Label Content="Количество" HorizontalAlignment="Left" Margin="0,24,0,0" Grid.Row="2" VerticalAlignment="Top" Height="47" Width="210"
+        <Label Content="Количество" HorizontalAlignment="Left" Margin="0,43,0,0" Grid.Row="2" VerticalAlignment="Top" Height="47" Width="119"
             Style="{DynamicResource ResourceKey=LabelStyle}"/>
 
-        <Slider x:Name="CakeQuantitySlider" HorizontalAlignment="Left" Margin="244,24,0,0" Grid.Row="2" VerticalAlignment="Top" Width="223"
-                Style="{DynamicResource MaterialDesignDiscreteHorizontalSlider}" SmallChange="0" Value="1" Maximum="5" TickPlacement="Both" Height="45" Minimum="1"/>
 
         <Button x:Name="ZakazWindowExit" Content="Назад" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="153" Height="62"
                 Style="{DynamicResource MaterialDesignFlatLightBgButton}" Click="ZakazWindowExit_Click"/>
 
-        <Button x:Name="ZakazWindowOformlenie" Content="Оформить заказ" HorizontalAlignment="Left" Margin="215,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="275" Height="62"
-                Style="{DynamicResource MaterialDesignFlatDarkBgButton}"/>
+        <Button x:Name="ZakazWindowOformlenie" Content="Оформить заказ" HorizontalAlignment="Left" Margin="615,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="275" Height="62"
+                Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Click="ZakazWindowOformlenie_Click"/>
 
-        <Label Content="Телефон" HorizontalAlignment="Left" Margin="-13,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="47" Width="210"
+        <Label Content="Телефон" HorizontalAlignment="Left" Margin="0,31,0,0" Grid.Row="3" VerticalAlignment="Top" Height="61" Width="119"
             Style="{DynamicResource LabelStyle}"/>
 
-        <TextBox x:Name="PhoneTextBox" HorizontalAlignment="Left" Height="47" Margin="215,10,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"
+        <TextBox x:Name="PhoneTextBox" HorizontalAlignment="Left" Height="61" Margin="124,27,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="312"
                  Style="{DynamicResource MaterialDesignTextBox}"/>
+
+        <TextBox x:Name="CakeNameTextBox" HorizontalAlignment="Left" Height="61" Margin="124,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"
+            Style="{DynamicResource MaterialDesignTextBox}"/>
+
+        <TextBox x:Name="CakeQuantityTextBox" HorizontalAlignment="Left" Height="61" Margin="124,29,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"
+            Style="{DynamicResource MaterialDesignTextBox}"/>
         
-        <TextBox x:Name="CakeTextBox" HorizontalAlignment="Left" Height="41" Margin="215,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="275"
-                 Style="{DynamicResource MaterialDesignTextBox}"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="441,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="71" Width="103"
+            Style="{DynamicResource LabelStyle}"/>
+        
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="441,31,0,0" Grid.Row="2" VerticalAlignment="Top" Height="71" Width="103"
+            Style="{DynamicResource LabelStyle}"/>
+        
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="441,27,0,0" Grid.Row="3" VerticalAlignment="Top" Height="71" Width="103"
+            Style="{DynamicResource LabelStyle}"/>
+        
+        <TextBox x:Name="LastNameTB" HorizontalAlignment="Left" Height="61" Margin="544,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="346"
+            Style="{DynamicResource MaterialDesignTextBox}"/>
+        
+        <TextBox x:Name="NameTB" HorizontalAlignment="Left" Height="61" Margin="544,41,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="346"
+            Style="{DynamicResource MaterialDesignTextBox}"/>
+        
+        <TextBox x:Name="PatronymicTB" HorizontalAlignment="Left" Height="61" Margin="544,27,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="346"
+            Style="{DynamicResource MaterialDesignTextBox}"/>
+
+
+
 
     </Grid>
 </Window>
